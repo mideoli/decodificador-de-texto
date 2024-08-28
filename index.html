@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de Texto</title>
-    <link rel="stylesheet" href=".styles/styles.css">
+    <title>Decodificador</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Decodificador de Texto</h1>
-        <textarea id="encodedText" placeholder="Digite o texto codificado aqui..."></textarea>
-        <button id="decodeButton">Decodificar</button>
-        <div id="decodedText" class="result"></div>
+        <header>
+            <h1 class="logo">Cryptix - Criptografia e Descriptografia</h1>
+        </header>
+        <main>
+            <section class="input-section">
+                <label for="text-input">Digite seu texto</label>
+                <textarea id="text-input" placeholder="Digite seu texto"></textarea>
+                <div class="buttons">
+                    <button id="encrypt-btn" class="btn-primary">Criptografar</button>
+                    <button id="decrypt-btn" class="btn-secondary">Descriptografar</button>
+                </div>
+                <small>Apenas letras minúsculas e sem acento.</small>
+            </section>
+            <section class="output-section">
+                <div id="output-placeholder" class="placeholder">
+                    <img src="placeholder-image.png" alt="Placeholder">
+                    <p>Nenhuma mensagem encontrada</p>
+                    <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+                </div>
+                <div id="output-result" class="result hidden">
+                    <p id="output-text"></p>
+                    <button id="copy-btn" class="btn-secondary">Copiar</button>
+                </div>
+            </section>
+        </main>
     </div>
-    <script src="app.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
